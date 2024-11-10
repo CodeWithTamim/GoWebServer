@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <!-- Project Module Manager Configuration -->
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GolangWebServer.iml" filepath="$PROJECT_DIR$/.idea/GolangWebServer.iml" />
+      <!-- Module definition for the Golang Web Server -->
+      <module 
+        fileurl="file://$PROJECT_DIR$/.idea/GolangWebServer.iml" 
+        filepath="$PROJECT_DIR$/.idea/GolangWebServer.iml" 
+      />
     </modules>
   </component>
 </project>
