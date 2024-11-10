@@ -1,7 +1,5 @@
 package main
-/*
-Add imports
-*/
+
 import (
 	"fmt"
 	"log"
@@ -9,16 +7,17 @@ import (
 )
 
 func main() {
-	//create a fileServer (type :Handler) and init
+	// Create a file server to serve static files from the "./static" directory
 	fileServer := http.FileServer(http.Dir("./static"))
-	//set the static folder as root
+
+	// Set the file server as the handler for the root URL path
 	http.Handle("/", fileServer)
-	//Print starting
-	fmt.Println("Starting server on port : 8080")
-	//start server 
-	err := http.ListenAndServe(":8080", nil)
-	//check the error , if contains then log
-	if err != nil {
-		log.Fatal(err)
+
+	// Print a message indicating the server is starting
+	fmt.Println("Starting server on port :8080")
+
+	// Start the HTTP server on port 8080
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatal(err) // Log any errors that occur while starting the server
 	}
 }
